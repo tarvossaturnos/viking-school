@@ -1,24 +1,26 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Elke dag één korte Noorse zin met de Nederlandse vertaling.">
-    <title>Norsk from scratch!</title>
+    <meta name="description" content="One short Norwegian sentence every day, with an English translation.">
+    <title>Norwegian from Scratch!</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="sentences.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
     <main class="card" aria-labelledby="norwegian">
       <section class="content">
-        <p class="eyebrow">NOORS VANDAAG</p>
+        <p class="eyebrow">NORWEGIAN TODAY</p>
 
-        <article class="daily-phrase" aria-live="polite">
+        <article class="daily-sentence" aria-live="polite">
           <p id="norwegian" class="norwegian" lang="no"></p>
-          <p id="dutch" class="dutch" lang="nl"></p>
+          <p id="english" class="english" lang="en"></p>
         </article>
 
-        <p class="note">Een kleine zin voor onderweg.</p>
+        <p class="note">A short Norwegian sentence, every day.</p>
+        <p class="source"><a href="https://www.nb.no/sprakbanken/en/resource-catalogue/oai-nb-no-sbr-68/" target="_blank" rel="noopener noreferrer">Sentences: Norwegian Language Bank · CC BY 4.0</a></p>
       </section>
     </main>
   </body>

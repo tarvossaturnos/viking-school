@@ -76,7 +76,7 @@ body {
   letter-spacing: .22em;
 }
 
-.daily-phrase {
+.daily-sentence {
   width: min(100%, 530px);
   margin: clamp(18px, 4svh, 31px) 0 0;
   padding: clamp(15px, 3svh, 24px) 0 clamp(16px, 3.2svh, 25px);
@@ -85,18 +85,18 @@ body {
 }
 
 .norwegian,
-.dutch { margin: 0; }
+.english { margin: 0; }
 
 .norwegian {
-  max-width: 12ch;
-  font-size: clamp(32px, 6.3vw, 66px);
+  max-width: 18ch;
+  font-size: clamp(26px, 4.8vw, 52px);
   font-weight: 700;
   line-height: .98;
   letter-spacing: -.045em;
   overflow-wrap: anywhere;
 }
 
-.dutch {
+.english {
   margin-top: clamp(9px, 1.6svh, 14px);
   color: var(--muted);
   font-family: Arial, Helvetica, sans-serif;
@@ -114,6 +114,17 @@ body {
   letter-spacing: .015em;
 }
 
+.source {
+  margin: 7px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(10px, 1.2vw, 12px);
+}
+
+.source a {
+  color: var(--muted);
+  text-underline-offset: 2px;
+}
+
 /* TRMNL: Full — 800 × 480 */
 @media (min-width: 600px) and (min-height: 360px) {
   .card {
@@ -129,7 +140,7 @@ body {
 
   .content { width: min(100%, 690px); }
 
-  .daily-phrase {
+  .daily-sentence {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(160px, .72fr);
     gap: clamp(22px, 5vw, 54px);
@@ -139,9 +150,10 @@ body {
     padding: clamp(11px, 4vh, 15px) 0;
   }
 
-  .norwegian { font-size: clamp(30px, 5vw, 47px); }
-  .dutch { margin: 0; font-size: clamp(15px, 2.4vw, 19px); }
+  .norwegian { max-width: 18ch; font-size: clamp(25px, 4.2vw, 40px); }
+  .english { margin: 0; font-size: clamp(15px, 2.4vw, 19px); }
   .note { margin-top: 11px; }
+  .source { display: none; }
   .card::before { height: 42px; }
   .card::after { height: 30px; }
 }
@@ -153,8 +165,8 @@ body {
   }
 
   .card { padding: clamp(28px, 8vw, 42px); }
-  .norwegian { font-size: clamp(36px, 10vw, 46px); }
-  .dutch { font-size: clamp(17px, 4.7vw, 20px); }
+  .norwegian { max-width: 16ch; font-size: clamp(27px, 7.8vw, 38px); }
+  .english { font-size: clamp(17px, 4.7vw, 20px); }
 }
 
 /* TRMNL: Quadrant — 400 × 240 */
@@ -167,22 +179,23 @@ body {
   .content { width: 100%; }
   .eyebrow { font-size: 9px; }
 
-  .daily-phrase {
+  .daily-sentence {
     margin-top: 11px;
     padding: 11px 0 12px;
   }
 
   .norwegian {
-    max-width: 11ch;
-    font-size: clamp(29px, 9.5vw, 39px);
+    max-width: 16ch;
+    font-size: clamp(20px, 6.6vw, 27px);
   }
 
-  .dutch {
+  .english {
     margin-top: 7px;
-    font-size: clamp(14px, 4.5vw, 17px);
+    font-size: clamp(12px, 3.8vw, 15px);
   }
 
-  .note { display: none; }
+  .note,
+  .source { display: none; }
   .card::before { height: 32px; }
   .card::after { height: 23px; }
 }

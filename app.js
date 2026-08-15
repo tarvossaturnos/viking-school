@@ -1,7 +1,7 @@
 const sentences = window.NORWEGIAN_SENTENCES;
 
-if (!Array.isArray(sentences) || sentences.length !== 1000) {
-  throw new Error("The sentence source must contain exactly 1,000 entries.");
+if (!Array.isArray(sentences) || sentences.length !== 171) {
+  throw new Error("The LearnNoW sentence source must contain exactly 171 entries.");
 }
 
 function osloDateKey() {

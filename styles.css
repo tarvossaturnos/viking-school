@@ -4,8 +4,9 @@
   --pine: #0a4138;
   --muted: #55786e;
   --rule: rgb(10 65 56 / 27%);
-  --mountain-back: #bad0c5;
-  --mountain-front: #91b3a6;
+  /* Solid, dark tones stay distinct after TRMNL converts the page to grayscale. */
+  --mountain-back: #55786e;
+  --mountain-front: #0a4138;
 }
 
 * { box-sizing: border-box; }
@@ -51,14 +52,14 @@ body {
   height: clamp(54px, 16svh, 92px);
   background: var(--mountain-back);
   clip-path: polygon(0 100%, 0 68%, 11% 53%, 22% 68%, 36% 34%, 49% 71%, 62% 50%, 75% 67%, 87% 23%, 100% 58%, 100% 100%);
-  opacity: .48;
+  opacity: 1;
 }
 
 .card::after {
   height: clamp(38px, 12svh, 70px);
   background: var(--mountain-front);
   clip-path: polygon(0 100%, 0 70%, 15% 34%, 27% 66%, 42% 44%, 54% 73%, 68% 24%, 79% 58%, 91% 37%, 100% 66%, 100% 100%);
-  opacity: .38;
+  opacity: 1;
 }
 
 .content {

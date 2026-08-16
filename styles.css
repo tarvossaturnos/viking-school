@@ -50,7 +50,8 @@ body {
 
 .card::before {
   height: clamp(54px, 16svh, 92px);
-  background: var(--mountain-back);
+  /* Keep the far ridge lighter on monochrome e-ink through visible hatching. */
+  background: repeating-linear-gradient(135deg, var(--mountain-back) 0 1px, transparent 1px 6px);
   clip-path: polygon(0 100%, 0 68%, 11% 53%, 22% 68%, 36% 34%, 49% 71%, 62% 50%, 75% 67%, 87% 23%, 100% 58%, 100% 100%);
   opacity: 1;
 }
@@ -61,6 +62,32 @@ body {
   clip-path: polygon(0 100%, 0 70%, 15% 34%, 27% 66%, 42% 44%, 54% 73%, 68% 24%, 79% 58%, 91% 37%, 100% 66%, 100% 100%);
   opacity: 1;
 }
+
+.forest {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: clamp(18px, 5svh, 30px);
+  left: 0;
+  height: clamp(25px, 6vw, 52px);
+  pointer-events: none;
+}
+
+.pine {
+  position: absolute;
+  bottom: 0;
+  width: clamp(10px, 2.25vw, 19px);
+  height: 100%;
+  background: var(--ink);
+  clip-path: polygon(50% 0, 65% 27%, 58% 27%, 78% 55%, 68% 55%, 100% 86%, 60% 86%, 60% 100%, 40% 100%, 40% 86%, 0 86%, 32% 55%, 22% 55%, 42% 27%, 35% 27%);
+}
+
+.pine:nth-child(1) { left: 4%; height: 65%; }
+.pine:nth-child(2) { left: 10%; height: 100%; }
+.pine:nth-child(3) { left: 17%; height: 72%; }
+.pine:nth-child(4) { right: 17%; height: 76%; }
+.pine:nth-child(5) { right: 10%; height: 100%; }
+.pine:nth-child(6) { right: 4%; height: 62%; }
 
 .content {
   position: relative;
@@ -157,6 +184,7 @@ body {
   .source { display: none; }
   .card::before { height: 42px; }
   .card::after { height: 30px; }
+  .forest { bottom: 14px; height: 30px; }
 }
 
 /* TRMNL: Half vertical — 400 × 480 */
@@ -199,4 +227,5 @@ body {
   .source { display: none; }
   .card::before { height: 32px; }
   .card::after { height: 23px; }
+  .forest { bottom: 10px; height: 22px; }
 }
